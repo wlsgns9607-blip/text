@@ -1,0 +1,25 @@
+:root{--bg:#f7f7f5;--card:#fff;--fg:#1c1c1a;--mut:#6b6b66;--line:#e2e2dc;--acc:#4f46e5;
+--c0:#3b82f6;--c1:#f59e0b;--c2:#10b981}
+@media(prefers-color-scheme:dark){:root{--bg:#161614;--card:#222220;--fg:#eeeee9;--mut:#9a9a92;--line:#3a3a36;--acc:#818cf8}}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;margin:0}
+body{max-width:720px;margin:0 auto;padding:20px 14px 40px}
+h1{margin:0 0 4px;font-size:1.6rem}h2{margin:0 0 12px;font-size:1.05rem}
+small{color:var(--mut);font-weight:400}.sub{color:var(--mut);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.scroll{overflow-x:auto}svg{width:100%;height:auto;display:block}svg text{fill:var(--mut);font-size:10px}
+.sl{display:grid;grid-template-columns:90px 1fr 44px;gap:8px;align-items:center;margin-bottom:6px;font-size:.9rem}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.bar{display:grid;grid-template-columns:90px 1fr 50px;gap:8px;align-items:center;margin:6px 0;font-size:.9rem}
+.track{background:var(--line);border-radius:6px;height:14px;overflow:hidden}
+.fill{height:100%;transition:width .15s}
+#winner{margin-top:10px;font-size:1.3rem;font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px}
+input[type=number]{width:80px;padding:6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+button{padding:8px 16px;border:0;border-radius:8px;background:var(--acc);color:#fff;cursor:pointer;font-size:.9rem}
+button.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+button:disabled{opacity:.5}
+#stat{font-size:.85rem;color:var(--mut);margin-bottom:6px}
+.hm{display:grid;grid-template-columns:90px repeat(3,1fr);gap:3px;font-size:.8rem;text-align:center}
+.hm div{padding:10px 4px;border-radius:4px}.hm .h{color:var(--mut);padding:4px}
+#runs div{font-size:.85rem;padding:6px 0;border-bottom:1px solid var(--line)}

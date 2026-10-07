@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아이리스 품종 분류</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>🌸 아이리스 품종 분류</h1>
+<p class="sub">Dense(3, softmax) 모델을 브라우저에서 직접 학습합니다 · 학습 120개 / 테스트 30개</p>
+
+<section class="card">
+  <h2>1. 예측기</h2>
+  <div id="sliders"></div>
+  <div id="bars"></div>
+  <div id="winner"></div>
+</section>
+
+<section class="card">
+  <h2>2. 산점도 <small>(꽃잎길이 × 꽃잎폭, ★ = 내 입력, 테두리 = 테스트 데이터)</small></h2>
+  <div class="scroll"><svg id="scatter" viewBox="0 0 400 260"></svg></div>
+</section>
+
+<section class="card">
+  <h2>3. 학습</h2>
+  <div class="row">
+    <label>에포크 <input id="ep" type="number" value="100" min="1" max="1000"></label>
+    <label>학습률 <input id="lr" type="number" value="0.1" step="0.01" min="0.001"></label>
+    <button id="go">학습 시작</button>
+    <button id="reset" class="ghost">리셋</button>
+  </div>
+  <div id="stat">에포크 0</div>
+  <div class="scroll"><svg id="curve" viewBox="0 0 400 180"></svg></div>
+</section>
+
+<section class="card">
+  <h2>4. 가중치 히트맵 <small>(빨강 +, 파랑 −)</small></h2>
+  <div id="heat"></div>
+</section>
+
+<section class="card">
+  <h2>5. 저장된 학습 기록 <small>(SQLite)</small></h2>
+  <div id="runs">없음</div>
+</section>
+<script src="/static/app.js"></script>
+</body>
+</html>
